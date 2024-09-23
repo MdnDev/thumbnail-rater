@@ -4,6 +4,7 @@ import { ModeToggle } from "@/components/ui/mode-toggle";
 import { SignInButton, UserButton } from "@clerk/nextjs";
 import { Authenticated, Unauthenticated } from "convex/react";
 import Image from "next/image";
+import { HeaderActions } from "./header-actions";
 
 export function Header() {
   return (
@@ -20,18 +21,9 @@ export function Header() {
           Big Brain
         </div>
 
-        <div>
-          {" "}
-          <Unauthenticated>
-            <SignInButton />
-          </Unauthenticated>
-          <Authenticated>
-            <div className="flex gap-4">
-              <UserButton />
-
-              <ModeToggle />
-            </div>
-          </Authenticated>
+        <div className="flex gap-4">
+          <ModeToggle />
+          <HeaderActions />
         </div>
       </div>
     </div>
