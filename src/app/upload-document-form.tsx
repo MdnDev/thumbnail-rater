@@ -1,5 +1,3 @@
-"use client";
-
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -18,12 +16,14 @@ import { api } from "../../convex/_generated/api";
 
 const formSchema = z.object({
   title: z.string().min(1).max(520),
-}) 
-
+});
 
 type FormSchema = z.infer<typeof formSchema>;
+interface UploadDocumentFormProps {
+  onUpload: () => void;
+}
 
-export function UploadDocumentForm() {
+export function UploadDocumentForm({ onUpload }: UploadDocumentFormProps) {
   const createDocument = useMutation(api.documents.createDocument);
   const form = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
@@ -32,9 +32,10 @@ export function UploadDocumentForm() {
     },
   });
 
-  function onSubmit(values: FormSchema) {
+  async function onSubmit(values: FormSchema) {
     console.log(values);
-    createDocument(values);
+    await createDocument(values);
+    onUpload();
   }
 
   return (
