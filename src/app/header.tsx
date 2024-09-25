@@ -1,8 +1,6 @@
 "use client";
 
 import { ModeToggle } from "@/components/ui/mode-toggle";
-import { SignInButton, UserButton } from "@clerk/nextjs";
-import { Authenticated, Unauthenticated } from "convex/react";
 import Image from "next/image";
 import { HeaderActions } from "./header-actions";
 
