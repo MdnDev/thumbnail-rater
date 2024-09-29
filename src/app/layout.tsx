@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn("min-h-screen bg-background front-sans antialiased")}
+        className={cn("min-h-screen bg-[#E6F2F2] dark:bg-[#001415] front-sans antialiased")}
       >
         <Providers>
           <Header/>

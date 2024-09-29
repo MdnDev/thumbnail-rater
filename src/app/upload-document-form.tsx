@@ -55,7 +55,7 @@ export function UploadDocumentForm({ onUpload }: UploadDocumentFormProps) {
             </FormItem>
           )}
         />
-        <Button type="submit">Upload</Button>
+        <Button className="bg-[#089981] dark:bg-[#11C99D]" type="submit">Upload</Button>
       </form>
     </Form>
   );

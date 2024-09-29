@@ -17,7 +17,7 @@ export function CreateDocumentButton() {
   return (
     <Dialog onOpenChange={setIsOpen} open={isOpen}>
       <DialogTrigger asChild>
-        <Button>Upload document</Button>
+        <Button className="bg-[#089981] dark:bg-[#11C99D] text-xl font-semibold mb-4 text-[#DBF9FF]">Upload document</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

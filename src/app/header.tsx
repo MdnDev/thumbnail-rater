@@ -6,7 +6,7 @@ import { HeaderActions } from "./header-actions";
 
 export function Header() {
   return (
-    <div className="bg-slate-900 py-4">
+    <div className="bg-[#11C99D] py-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center gap-4 text-2xl">
           <Image
